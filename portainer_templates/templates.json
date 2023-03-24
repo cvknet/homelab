@@ -1,0 +1,19 @@
+{
+  "version": "2",
+  "templates": [
+    {
+      "type: 1,
+      "title": "Heimdall",
+      "note": "bla bla bla bla bla bla ",
+      "description": "bla bla bla bla bla bla ",
+      "categories": ["Tools"],
+      "platform": "Linux",
+      "image": "lscr.io/linuxserver/heimdall:latest",
+      "ports": [
+      	"80/tcp",
+      	443/tcp
+      ],
+      
+    }
+  ]
+}
