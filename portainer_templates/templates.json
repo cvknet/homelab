@@ -29,8 +29,10 @@
 	"bind": "heimdallvolume",
 	"container": "/config"
 	}
-	]
-      
+	],
+        "ports": [
+      "8765:80/tcp"
+  	]
     }
   ]
 }
