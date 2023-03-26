@@ -4,15 +4,33 @@
     {
       "type": 1,
       "title": "Heimdall",
-      "note": "Testnote ",
-      "description": "bla bla bla bla bla bla ",
+      "description": "Heimdall Dashboard, erstelt ein Volume 'heimdallvolume'",
       "categories": ["Tools"],
       "platform": "Linux",
       "image": "lscr.io/linuxserver/heimdall:latest",
       "ports": [
       	"80/tcp",
       	"443/tcp"
-      ]  
+      ],
+      "env": [
+      {
+      	"default": "1000",
+      	"label": "PUID",
+      	"name": "PUID"
+      	},
+      	{
+      	"default": "1000",
+      	"label": "PGID",
+      	"name": "PGID"
+	}
+      ],
+      "volumes": [    
+	{
+	"bind": "heimdallvolume",
+	"container": "/config"
+	}
+	]
+      
     }
   ]
 }
