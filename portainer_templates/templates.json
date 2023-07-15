@@ -4,7 +4,7 @@
     {
       "type": 1,
       "title": "Heimdall",
-      "description": "Heimdall Dashboard, erstellt ein Volume 'heimdallvolume'",
+      "description": "Heimdall Dashboard, erstellt ein Volume 'heimdallvolume', Port: 8765",
       "categories": ["Tools"],
       "platform": "Linux",
       "image": "lscr.io/linuxserver/heimdall:latest",
