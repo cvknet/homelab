@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+  telegraf:
+    image: telegraf
+    container_name: telegraf
+    restart: always
+    deploy:
+      mode: global
+
+    volumes:
+    - /opt/docker/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
