@@ -46,6 +46,6 @@
       "url": "https://github.com/deviantony/templates",
       "stackfile": "stacks/portainer-agent/docker-stack.yml"
     }
-  },
+  }
   ]
 }
