@@ -7,5 +7,6 @@ Die Sammlung enthält folgende Vorlagen:
 
 
 ### Einzelvorlagen für Stacks
+Diese werden über 'templates.json' referenziert.
 * telegraf Stack
 * portainer agent stack
