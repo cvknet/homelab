@@ -6,6 +6,18 @@ services:
     restart: always
     deploy:
       mode: global
-
     volumes:
-    - /opt/docker/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    - /opt/docker/telegraf/{{.Node.Hostname}}.conf:/etc/telegraf/telegraf.conf:ro
+    
+  solartelegraf:
+    image: telegraf
+    container_name: solar
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 1
+    volumes:
+    - /opt/docker/telegraf/solaranlage.conf:/etc/telegraf/telegraf.conf:ro
+
+    
+    
