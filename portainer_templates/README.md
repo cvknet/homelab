@@ -1,5 +1,11 @@
 # Templates für Portainer
 
-### Heimdall
-- Heimdall Template legt ein Volume "heimdallvolume" an
-- Port wird auf 8765 eingestellt
+### Sammlung 'templates.json'
+Die Sammlung enthält folgende Vorlagen:
+* Heimdall
+* Portainer Agent
+
+
+### Einzelvorlagen für Stacks
+* telegraf Stack
+* portainer agent stack
