@@ -45,6 +45,18 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "stacks/portainer-agent/docker-stack.yml"
       }
+    },
+    {
+      "type": 2,
+      "title": "Telegraf",
+      "description": "Datenerfassung mit telegraf inkl. Solaranlage",
+      "note": "Stack noch eine draft!",
+      "categories": ["telegraf"],
+      "platform": "linux",
+      "repository": {
+        "url": "https://github.com/cvknet/homelab",
+        "stackfile": "portainer_templates/telegraf_stack.yml"
+      }
     }
    ]
 }
