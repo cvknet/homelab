@@ -55,7 +55,7 @@
       "platform": "linux",
       "repository": {
         "url": "https://github.com/cvknet/homelab",
-        "stackfile": "portainer_templates/portainer_agent_stack.yml"
+        "stackfile": "portainer_templates/telegraf_stack.yml"
       }
     }
    ]
