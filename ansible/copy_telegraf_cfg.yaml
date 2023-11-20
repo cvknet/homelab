@@ -1,0 +1,32 @@
+---
+- hosts: pi
+  become: true
+  tasks:
+    - name: "kopiere pollux telegraf-config"
+      ansible.builtin.copy:
+        src: /home/cvk/scripte/config/telegraf/pollux.conf
+        dest: /opt/docker/telegraf/pollux.conf
+        owner: root
+        group: root
+        mode: '0644'
+    - name: "kopiere zeus telegraf-config"
+      ansible.builtin.copy:
+        src: /home/cvk/scripte/config/telegraf/zeus.conf
+        dest: /opt/docker/telegraf/zeus.conf
+        owner: root
+        group: root
+        mode: '0644'
+    - name: "kopiere messdaten telegraf-config"
+      ansible.builtin.copy:
+        src: /home/cvk/scripte/config/telegraf/messdaten.conf
+        dest: /opt/docker/telegraf/messdaten.conf
+        owner: root
+        group: root
+        mode: '0644'
+    - name: "kopiere solaranlage telegraf-config"
+      ansible.builtin.copy:
+        src: /home/cvk/scripte/config/telegraf/solaranlage.conf
+        dest: /opt/docker/telegraf/solaranlage.conf
+        owner: root
+        group: root
+        mode: '0644'
