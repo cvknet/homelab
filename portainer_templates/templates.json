@@ -43,7 +43,7 @@
       "platform": "linux",
       "repository": {
         "url": "https://github.com/cvknet/homelab",
-        "stackfile": "stacks/portainer-agent/docker-stack.yml"
+        "stackfile": "portainer_templates/portainer_agent_stack.yml"
       }
     },
     {
