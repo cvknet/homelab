@@ -57,6 +57,18 @@
         "url": "https://github.com/cvknet/homelab",
         "stackfile": "portainer_templates/telegraf_stack.yml"
       }
-    }
+    },
+    {
+      "type": 2,
+      "title": "Hausautomation",
+      "description": "Stack für Hausautomation",
+      "note": "..",
+      "categories": ["hausautomation"],
+      "platform": "linux",
+      "repository": {
+        "url": "https://github.com/cvknet/homelab",
+        "stackfile": "portainer_templates/ha_stack.yml"
+      }
+    }  
    ]
 }
