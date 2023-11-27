@@ -1,0 +1,49 @@
+version: '3.9'
+
+services:
+  mqttdanfoss:
+    image: cvk/mqttdanfoss
+  mqttsolarpower:
+    image: cvk/mqttsolarpower
+  mqtt_server:
+    image: eclipse-mosquitto:1.6.10 
+    restart: always
+    ports:
+      - 1883:1883
+    deploy:
+      mode: replicated
+      replicas: 1
+ 
+  wsvpegel:
+    image: cvk/wsvpegel
+  uptime-kuma:
+    image: louislam/uptime-kuma
+    deploy:
+      placement:
+        constraints:
+          - "node.hostname==jarvis"
+    container_name: uptimekuma
+    ports:
+    - 3001:3001
+    restart: always
+    volumes:
+    - /opt/docker/uptime_kuma:/app/data
+
+
+  searxng:
+    image: searxng/searxng:latest
+    container_name: searxng
+    deploy:
+      placement:
+        constraints:
+          - "node.hostname==pollux"  
+    ports:
+      - "8044:8080"
+    volumes:
+      - searxng:/etc/searxng
+    restart: always
+    
+volumes:
+  searxng:
+    
+ 
