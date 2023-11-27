@@ -4,9 +4,7 @@
 Die Sammlung enthält folgende Vorlagen:
 * Heimdall
 * Portainer Agent
+* Hausautomationsstack
 
 
-### Einzelvorlagen für Stacks
-Diese werden über 'templates.json' referenziert.
-* telegraf Stack
-* portainer agent stack
+
