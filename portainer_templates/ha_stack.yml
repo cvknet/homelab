@@ -13,7 +13,27 @@ services:
     deploy:
       mode: replicated
       replicas: 1
- 
+  webserver:
+    image: cvk/webserver
+    ports:
+      - 80:80
+    deploy:
+      placement:
+        constraints:
+          - "node.hostname==jarvis"
+  dokuwiki:
+    image: bitnami/dokuwiki:latest
+    deploy:
+      placement:
+        constraints:
+          - "node.hostname==jarvis"
+    container_name: dokuwiki
+    ports:
+    - 8080:8080
+    restart: always
+    volumes:
+    - /opt/cvknet/dokuwiki:/bitnami/dokuwiki
+  
   wsvpegel:
     image: cvk/wsvpegel
   uptime-kuma:
